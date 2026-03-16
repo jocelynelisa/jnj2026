@@ -72,12 +72,12 @@ const Program = () => {
               >
                 {schedule[activeDay].map((item, index) => (
                   <div key={index} className={`timeline-item type-${item.type}`}>
+                    <div className="time-badge">
+                      <Clock size={16} />
+                      <span>{item.time}</span>
+                    </div>
                     <div className="timeline-dot"></div>
                     <div className="timeline-content">
-                      <div className="time-badge">
-                        <Clock size={16} />
-                        <span>{item.time}</span>
-                      </div>
                       <h3 className="event-title">{item.title}</h3>
                       <div className="event-location">
                         <MapPin size={16} />

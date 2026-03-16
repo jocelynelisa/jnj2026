@@ -40,18 +40,31 @@ const Registration = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <form className="registration-form" onSubmit={(e) => e.preventDefault()}>
+            <form 
+              className="registration-form" 
+              name="inscription" 
+              method="POST" 
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="inscription" />
+              <p className="hidden" style={{ display: 'none' }}>
+                <label>
+                  Ne pas remplir ce champ si vous êtes humain : <input name="bot-field" />
+                </label>
+              </p>
+
               <h3 className="form-title">Formulaire de pré-inscription</h3>
               
               <div className="form-group">
                 <label htmlFor="name">Nom et Prénom(s)</label>
-                <input type="text" id="name" placeholder="Ex: Koffi Emmanuel" className="form-input" required />
+                <input type="text" id="name" name="nom" placeholder="Ex: Koffi Emmanuel" className="form-input" required />
               </div>
               
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="diocese">Diocèse d'origine</label>
-                  <select id="diocese" className="form-input" required>
+                  <select id="diocese" name="diocese" className="form-input" required>
                     <option value="">Sélectionnez votre diocèse</option>
                     <option value="lome">Lomé</option>
                     <option value="aneho">Aného</option>
@@ -65,24 +78,24 @@ const Registration = () => {
                 
                 <div className="form-group">
                   <label htmlFor="parish">Paroisse</label>
-                  <input type="text" id="parish" placeholder="Nom de votre paroisse" className="form-input" required />
+                  <input type="text" id="parish" name="paroisse" placeholder="Nom de votre paroisse" className="form-input" required />
                 </div>
               </div>
               
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="phone">Téléphone (WhatsApp de préférence)</label>
-                  <input type="tel" id="phone" placeholder="+228 XX XX XX XX" className="form-input" required />
+                  <input type="tel" id="phone" name="telephone" placeholder="+228 XX XX XX XX" className="form-input" required />
                 </div>
                 
                 <div className="form-group">
                   <label htmlFor="age">Âge</label>
-                  <input type="number" id="age" min="15" max="35" placeholder="18" className="form-input" required />
+                  <input type="number" id="age" name="age" min="15" max="35" placeholder="18" className="form-input" required />
                 </div>
               </div>
 
               <div className="form-group checkbox-group">
-                <input type="checkbox" id="consent" required />
+                <input type="checkbox" id="consent" name="consentement" required />
                 <label htmlFor="consent" className="checkbox-label">
                   J'accepte que mes données soient utilisées pour l'organisation des JNJ 2026.
                 </label>
