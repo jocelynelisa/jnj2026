@@ -5,19 +5,20 @@ import './Program.css';
 
 const Program = () => {
   const [activeDay, setActiveDay] = useState(1);
-  
+
   const days = [
-    { id: 1, name: "Jour 1", date: "Vendredi" },
-    { id: 2, name: "Jour 2", date: "Samedi" },
-    { id: 3, name: "Jour 3", date: "Dimanche" }
+    { id: 1, name: "Jour 1", date: "Jeudi" },
+    { id: 2, name: "Jour 2", date: "Vendredi" },
+    { id: 3, name: "Jour 3", date: "Samedi" },
+    { id: 4, name: "Jour 4", date: "Dimanche" }
   ];
 
   const schedule = {
     1: [
-      { time: "08:00 - 12:00", title: "Accueil et Installation", location: "Divers sites d'hébergement", type: "logistics" },
-      { time: "14:00 - 16:00", title: "Cérémonie d'ouverture", location: "Stade Municipal", type: "main" },
-      { time: "16:30 - 18:00", title: "Messe d'ouverture", location: "Stade Municipal", type: "spiritual" },
-      { time: "20:00 - 22:00", title: "Veillée culturelle d'intégration", location: "Place des fêtes", type: "cultural" }
+      { time: "13:00 - 16:00", title: "Accueil et installation des pèlerins", location: "Divers sites d'hébergement", type: "logistics" },
+      { time: "17:00 - 19:00", title: "Messe d'ouverture", location: "Paroisses d'accueil", type: "spiritual" },
+      { time: "19:00 - 20:30", title: "Dîner", location: "Sites d'hébergement", type: "logistics" },
+      { time: "21:00 - 23:30", title: "Veillée d'intégration", location: "Place des fêtes", type: "cultural" }
     ],
     2: [
       { time: "07:00 - 08:00", title: "Laudes et petit-déjeuner", location: "Sites d'hébergement", type: "spiritual" },
@@ -30,6 +31,9 @@ const Program = () => {
       { time: "08:00 - 09:30", title: "Rassemblement final", location: "Stade Municipal", type: "main" },
       { time: "10:00 - 12:30", title: "Messe de clôture et envoi", location: "Stade Municipal", type: "spiritual" },
       { time: "13:00", title: "Déjeuner et départ des délégations", location: "Sites d'hébergement", type: "logistics" }
+    ],
+    4: [
+      { time: "À définir", title: "Programme détaillé à venir", location: "À définir", type: "main" }
     ]
   };
 
@@ -39,7 +43,7 @@ const Program = () => {
         <div className="section-header text-center">
           <h2 className="section-title">Le programme</h2>
           <p className="section-description mx-auto max-w-2xl">
-            Découvrez les temps forts prévus pour ces journées inoubliables. 
+            Découvrez les temps forts prévus pour ces journées inoubliables.
             Le programme détaillé sera mis à jour à l'approche de l'événement.
           </p>
         </div>
