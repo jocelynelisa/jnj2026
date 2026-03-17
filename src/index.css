@@ -126,8 +126,6 @@ img, video {
   margin-bottom: var(--space-12);
   position: relative;
   display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .section-title::after {

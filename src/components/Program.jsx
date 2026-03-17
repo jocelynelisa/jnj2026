@@ -21,19 +21,34 @@ const Program = () => {
       { time: "21:00 - 23:30", title: "Veillée d'intégration", location: "Place des fêtes", type: "cultural" }
     ],
     2: [
-      { time: "07:00 - 08:00", title: "Laudes et petit-déjeuner", location: "Sites d'hébergement", type: "spiritual" },
-      { time: "09:00 - 12:00", title: "Catéchèses thématiques", location: "Diverses paroisses", type: "spiritual" },
-      { time: "14:00 - 17:00", title: "Festival de la Jeunesse", location: "Centre ville", type: "cultural" },
-      { time: "18:00 - 19:30", title: "Chemin de Croix", location: "Colline d'Atakpamé", type: "spiritual" },
-      { time: "21:00 - 23:00", title: "Veillée de réconciliation et adoration", location: "Cathédrale", type: "spiritual" }
+      { time: "05:00 - 06:00", title: "Réveil", location: "Sites d'hébergement", type: "logistics" },
+      { time: "06:15 - 07:00", title: "Petit déjeuner", location: "Sites d'hébergement", type: "logistics" },
+      { time: "07:15 - 08:00", title: "Animation culturelle", location: "Divers sites", type: "cultural" },
+      { time: "07:30 - 09:00", title: "Confession dans les paroisses d'accueil", location: "Paroisses d'accueil", type: "spiritual" },
+      { time: "09:00 - 10:30", title: "Catéchèse sur les paroisses d'accueil", location: "Paroisses d'accueil", type: "spiritual" },
+      { time: "10:45 - 12:15", title: "Célébration Eucharistique", location: "Paroisses d'accueil", type: "spiritual" },
+      { time: "12:30 - 14:00", title: "Déjeuner", location: "Sites d'hébergement", type: "logistics" },
+      { time: "14:30 - 16:30", title: "Atelier de formation", location: "Centres de formation", type: "main" },
+      { time: "17:00 - 19:00", title: "Chemin de croix", location: "Parcours dédié", type: "spiritual" },
+      { time: "19:30 - 20:30", title: "Dîner", location: "Sites d'hébergement", type: "logistics" },
+      { time: "21:00", title: "Retour sur le site d'accueil", location: "Sites d'hébergement", type: "logistics" }
     ],
     3: [
-      { time: "08:00 - 09:30", title: "Rassemblement final", location: "Stade Municipal", type: "main" },
-      { time: "10:00 - 12:30", title: "Messe de clôture et envoi", location: "Stade Municipal", type: "spiritual" },
-      { time: "13:00", title: "Déjeuner et départ des délégations", location: "Sites d'hébergement", type: "logistics" }
+      { time: "05:00 - 06:00", title: "Réveil", location: "Sites d'hébergement", type: "logistics" },
+      { time: "06:15 - 07:00", title: "Petit déjeuner", location: "Sites d'hébergement", type: "logistics" },
+      { time: "07:15 - 08:45", title: "Catéchèse dans les zones", location: "Diverses zones", type: "spiritual" },
+      { time: "09:00 - 10:30", title: "Célébration Eucharistique", location: "Lieux de célébration", type: "spiritual" },
+      { time: "11:00 - 13:30", title: "Visite touristique + Déjeuner", location: "À travers la ville", type: "cultural" },
+      { time: "14:00 - 20:00", title: "Village des talents catholiques", location: "Site dédié", type: "cultural" },
+      { time: "20:00 - 21:00", title: "Dîner", location: "Sites d'hébergement", type: "logistics" },
+      { time: "22:00 - 03:00", title: "La nuit d'adoration", location: "Lieu de rassemblement", type: "spiritual" }
     ],
     4: [
-      { time: "À définir", title: "Programme détaillé à venir", location: "À définir", type: "main" }
+      { time: "03:00 - 05:00", title: "Concert avec des artistes", location: "Scène principale", type: "cultural" },
+      { time: "05:00 - 06:00", title: "Ambiance louange Gospel", location: "Scène principale", type: "cultural" },
+      { time: "07:00 - 09:00", title: "Messe solennelle de clôture avec tous les Evêques", location: "Grand lieu", type: "spiritual" },
+      { time: "11:00", title: "Déjeuner", location: "Sites d'hébergement", type: "logistics" },
+      { time: "13:00 - Soir", title: "Départ progressif des délégations diocésaines", location: "Points de départ", type: "logistics" }
     ]
   };
 

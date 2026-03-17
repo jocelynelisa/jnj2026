@@ -11,10 +11,10 @@ const Hero = () => {
         <div className="hero-shape hero-shape-2"></div>
         <div className="hero-shape hero-shape-3"></div>
       </div>
-      
+
       <div className="container hero-container">
         <div className="hero-content">
-          <motion.div 
+          <motion.div
             className="hero-badge"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -22,18 +22,18 @@ const Hero = () => {
           >
             <span className="badge-text">Journées Nationales de la Jeunesse</span>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             className="hero-title"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Ensemble, marchons vers <br/>
+            Ensemble, marchons vers <br />
             <span className="text-gradient">Atakpamé 2026</span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="hero-subtitle"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,8 +41,8 @@ const Hero = () => {
           >
             Un rassemblement de foi, d'espérance et de fraternité pour toute la jeunesse catholique du Togo.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             className="hero-meta"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ const Hero = () => {
               <Calendar className="meta-icon" />
               <div>
                 <span className="meta-label">Date</span>
-                <p className="meta-value">À définir, 2026</p>
+                <p className="meta-value">30/07 - 02/08/2026</p>
               </div>
             </div>
             <div className="meta-item glass-card">
@@ -63,8 +63,8 @@ const Hero = () => {
               </div>
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="hero-actions"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
