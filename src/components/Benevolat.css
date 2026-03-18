@@ -1,0 +1,219 @@
+.benevolat-page {
+  background-color: var(--color-bg-base);
+  min-height: 100vh;
+}
+
+.benevolat-nav {
+  padding: var(--space-4) 0;
+  background-color: white;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: var(--color-bg-alt);
+  color: var(--color-primary-dark);
+}
+
+.benevolat-hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: white;
+  padding: var(--space-12) 0;
+  text-align: center;
+}
+
+.hero-icon {
+  margin-bottom: var(--space-4);
+  color: var(--color-accent);
+}
+
+.benevolat-hero .hero-title {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-4);
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .benevolat-hero .hero-title {
+    font-size: 3.5rem;
+    color: #ffffff;
+  }
+}
+
+.benevolat-hero .hero-subtitle {
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.benevolat-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .benevolat-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.info-card {
+  padding: var(--space-8);
+}
+
+.info-card h2 {
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-6);
+  font-size: 1.5rem;
+}
+
+.benefits-list, .missions-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-list li, .missions-list li {
+  position: relative;
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-main);
+  line-height: 1.6;
+}
+
+.benefits-list li::before, .missions-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.benevolat-form-container {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+@media (min-width: 768px) {
+  .benevolat-form-container {
+    padding: var(--space-10) var(--space-8);
+  }
+}
+
+.benevolat-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4); /* Ensures explicit gap between form and container */
+}
+
+.benevolat-form .form-group {
+  margin-bottom: var(--space-6);
+}
+
+.mt-6 {
+  margin-top: var(--space-6);
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Form Styling Improvements */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.8);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-text-main);
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.checkbox-group input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+  margin-top: 0.125rem;
+}
+
+.checkbox-label {
+  font-size: 0.875rem !important;
+  color: var(--color-text-muted) !important;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.benevolat-form .btn-primary {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 640px) {
+  .benevolat-form .btn-primary {
+    width: auto;
+    padding: 1rem 3rem;
+  }
+}

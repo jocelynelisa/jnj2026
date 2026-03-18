@@ -1,9 +1,28 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Send, CheckCircle } from 'lucide-react';
 import './Registration.css';
 
 const Registration = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        setIsSubmitted(true);
+        form.reset();
+        setTimeout(() => setIsSubmitted(false), 15000); // hide after 15s
+      })
+      .catch((error) => console.error(error));
+  };
   return (
     <section id="inscription" className="section registration-section">
       <div className="container">
@@ -46,6 +65,7 @@ const Registration = () => {
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
             >
               <input type="hidden" name="form-name" value="inscription" />
               <p className="hidden" style={{ display: 'none' }}>
@@ -108,6 +128,33 @@ const Registration = () => {
             </form>
           </motion.div>
         </div>
+
+        <AnimatePresence>
+          {isSubmitted && (
+            <motion.div
+              className="registration-toast-container"
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 20, scale: 0.9 }}
+              transition={{ duration: 0.4 }}
+            >
+              <div className="registration-toast glass-card">
+                <CheckCircle className="toast-icon" size={32} />
+                <div className="toast-content">
+                  <h4>Demande envoyée !</h4>
+                  <p>
+                    Merci pour votre Pré-inscription, les paiements se font sur les numéros{' '}
+                    <span className="toast-number">(+228) 97-97-60-63</span> | <span className="toast-number">90-11-33-12</span>
+                    {' '}avec une capture d'écran à l'appui sur whatsapp et vous recevrez l'attestation d'inscription.
+                  </p>
+                </div>
+                <button className="toast-close" onClick={() => setIsSubmitted(false)} aria-label="Fermer">
+                  &times;
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

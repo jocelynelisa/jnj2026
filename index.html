@@ -7,6 +7,25 @@
     <title>jnj2026</title>
   </head>
   <body>
+    <!-- A little help for Netlify Forms bots -->
+    <form name="inscription" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="nom" />
+      <select name="diocese"></select>
+      <input type="text" name="paroisse" />
+      <input type="tel" name="telephone" />
+      <input type="number" name="age" />
+      <input type="checkbox" name="consentement" />
+    </form>
+
+    <form name="benevolat" netlify hidden>
+      <input type="text" name="nom" />
+      <input type="tel" name="telephone" />
+      <select name="diocese"></select>
+      <select name="domaine"></select>
+      <textarea name="message"></textarea>
+      <input type="checkbox" name="consentement" />
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
