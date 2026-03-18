@@ -4,7 +4,7 @@ import './Footer.css';
 
 const WhatsappIcon = ({ size = 20 }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
   </svg>
 );
 
@@ -20,7 +20,7 @@ const Footer = () => {
               JNJ Atakpamé <span>2026</span>
             </h2>
             <p className="footer-desc">
-              Les Journées Nationales de la Jeunesse Catholique du Togo. 
+              Les Journées Nationales de la Jeunesse Catholique du Togo.
               Un grand rassemblement de foi, d'espérance et de fraternité.
             </p>
             <div className="social-links">
@@ -54,9 +54,8 @@ const Footer = () => {
           <div className="footer-contact">
             <h3 className="footer-heading">Contact</h3>
             <address className="footer-address">
-              <p>Diocèse d'Atakpamé</p>
-              <p>Coordination des JNJ</p>
-              <p>BP: XXX, Atakpamé, Togo</p>
+              <p>R.P. George Gauthier AMEDONOU (Aumônier National) 93 54 57 76</p>
+              <p>M. Crépin ASSIGNON (Président National) 91 50 55 00</p>
               <p className="contact-email">jnjtogo2026@gmail.com</p>
             </address>
           </div>
