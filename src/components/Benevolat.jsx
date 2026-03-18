@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HeartHandshake, ArrowLeft, CheckCircle, X } from 'lucide-react';
 import Footer from './Footer';
+import BenevolatProgram from './BenevolatProgram';
 import './Benevolat.css';
 
 const Benevolat = ({ onBack }) => {
@@ -93,7 +94,9 @@ const Benevolat = ({ onBack }) => {
             </motion.div>
           </div>
 
-          <motion.div
+          <BenevolatProgram />
+
+          <motion.div 
             className="benevolat-form-container glass-card"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

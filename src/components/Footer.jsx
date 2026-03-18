@@ -57,7 +57,7 @@ const Footer = () => {
               <p>Diocèse d'Atakpamé</p>
               <p>Coordination des JNJ</p>
               <p>BP: XXX, Atakpamé, Togo</p>
-              <p className="contact-email">contact@jnj-atakpame2026.tg</p>
+              <p className="contact-email">jnjtogo2026@gmail.com</p>
             </address>
           </div>
         </div>
