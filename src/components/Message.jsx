@@ -1,9 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Quote, X } from 'lucide-react';
+import lettreCirculaire from '../assets/Lettre Circulaire.webp';
 import './Message.css';
 
 const Message = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id="message" className="section message-section">
       <div className="container">
@@ -56,7 +58,42 @@ const Message = () => {
             </div>
           </motion.div>
         </div>
+        {/* Circular Letter Card */}
+        <div className="message-container glass circular-letter-card" onClick={() => setIsModalOpen(true)}>
+          <motion.img 
+            src={lettreCirculaire} 
+            alt="Lettre Circulaire"
+            className="circular-letter-image"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          />
+          <div className="click-to-enlarge-overlay">
+            <span>Cliquez pour agrandir</span>
+          </div>
+        </div>
       </div>
+
+      {/* Modal for enlarged image */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div 
+            className="modal-overlay" 
+            onClick={() => setIsModalOpen(false)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <button className="modal-close" onClick={() => setIsModalOpen(false)}>
+                <X size={32} />
+              </button>
+              <img src={lettreCirculaire} alt="Lettre Circulaire" className="modal-image" />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

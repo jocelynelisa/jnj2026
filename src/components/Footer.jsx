@@ -1,12 +1,9 @@
 import React from 'react';
-import { Facebook, Instagram, Youtube, Heart } from 'lucide-react';
+import { Instagram, Heart } from 'lucide-react';
+import twitterIcon from '../assets/twitter-x.svg';
+import whatsappIconUrl from '../assets/whatsapp.svg';
 import './Footer.css';
 
-const WhatsappIcon = ({ size = 20 }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-  </svg>
-);
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,10 +21,15 @@ const Footer = () => {
               Un grand rassemblement de foi, d'espérance et de fraternité.
             </p>
             <div className="social-links">
-              <a href="#" className="social-link" aria-label="Facebook"><Facebook size={20} /></a>
-              <a href="https://whatsapp.com/channel/0029VbC8LvN84OmJgi5b5V43" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp"><WhatsappIcon size={20} /></a>
-              <a href="#" className="social-link" aria-label="Instagram"><Instagram size={20} /></a>
-              <a href="#" className="social-link" aria-label="YouTube"><Youtube size={20} /></a>
+              <a href="https://whatsapp.com/channel/0029VbC8LvN84OmJgi5b5V43" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
+                <img src={whatsappIconUrl} alt="WhatsApp" width="20" height="20" style={{ filter: 'invert(1)' }} />
+              </a>
+              <a href="https://x.com/JNJAtakpame2026" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="X (Twitter)">
+                <img src={twitterIcon} alt="X (Twitter)" width="18" height="18" style={{ filter: 'invert(1)' }} />
+              </a>
+              <a href="https://www.instagram.com/jnjatakpame2026/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
+                <Instagram size={20} />
+              </a>
             </div>
           </div>
 
