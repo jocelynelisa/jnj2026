@@ -1,24 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Colors - Church Event Tailored */
-  --color-primary: hsl(220, 80%, 25%);      /* Deep spiritual blue */
-  --color-primary-light: hsl(220, 70%, 45%);
-  --color-primary-dark: hsl(220, 90%, 15%);
+  /* Colors - Branding Tailored */
+  --color-primary: #016849;      /* Dark Green */
+  --color-primary-light: rgba(1, 104, 73, 0.8);
+  --color-primary-dark: #004d35;
   
-  --color-accent: hsl(45, 95%, 55%);        /* Vibrant gold/yellow */
-  --color-accent-light: hsl(45, 95%, 70%);
-  --color-accent-hover: hsl(45, 95%, 50%);
+  --color-accent: #fdcd00;        /* Yellow */
+  --color-accent-light: rgba(253, 205, 0, 0.8);
+  --color-accent-hover: #e0b600;
+
+  --color-danger: #d51c31;        /* Red */
+  --color-danger-light: rgba(213, 28, 49, 0.8);
 
   /* Backgrounds */
-  --color-bg-base: hsl(210, 20%, 98%);      /* Off-white */
-  --color-bg-card: hsl(0, 0%, 100%);
-  --color-bg-alt: hsl(210, 25%, 95%);
+  --color-bg-base: #fafafa;
+  --color-bg-card: #ffffff;
+  --color-bg-alt: #f4f6f8;
 
   /* Text */
-  --color-text-main: hsl(220, 20%, 15%);
-  --color-text-muted: hsl(220, 15%, 45%);
-  --color-text-inverse: hsl(0, 0%, 100%);
+  --color-text-main: #000000;
+  --color-text-muted: #555555;
+  --color-text-inverse: #ffffff;
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;

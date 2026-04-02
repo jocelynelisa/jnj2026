@@ -61,7 +61,9 @@
   font-size: 1.125rem;
   max-width: 600px;
   margin: 0 auto;
-  opacity: 0.9;
+  color: var(--color-accent);
+  font-weight: 600;
+  opacity: 1;
 }
 
 .benevolat-grid {

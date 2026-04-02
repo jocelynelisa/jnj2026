@@ -37,6 +37,9 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+          <a href="#benevolat" className="btn btn-outline nav-btn">
+            Bénévolat
+          </a>
           <a href="#inscription" className="btn btn-primary nav-btn">
             Inscription
           </a>
@@ -64,6 +67,13 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+          <a 
+            href="#benevolat" 
+            className="btn btn-outline mobile-nav-btn"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Bénévolat
+          </a>
           <a 
             href="#inscription" 
             className="btn btn-primary mobile-nav-btn"
