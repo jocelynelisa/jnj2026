@@ -7,6 +7,7 @@ import Program from './components/Program';
 import Registration from './components/Registration';
 import Partners from './components/Partners';
 import Guide from './components/Guide';
+import Gallery from './components/Gallery';
 import Map from './components/Map';
 import Footer from './components/Footer';
 import Benevolat from './components/Benevolat';
@@ -49,6 +50,7 @@ function App() {
         <Registration />
         <Partners />
         <Guide />
+        <Gallery />
         <Map />
       </main>
 
