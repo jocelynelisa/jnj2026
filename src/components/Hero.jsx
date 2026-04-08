@@ -20,7 +20,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="badge-text">Journées Nationales de la Jeunesse</span>
+            <span className="badge-text">Journées Nationales des jeunes du Togo</span>
           </motion.div>
 
           <motion.h1
