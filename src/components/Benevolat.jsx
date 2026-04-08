@@ -105,6 +105,7 @@ const Benevolat = ({ onBack }) => {
             <h3 className="form-title text-center">Formulaire de candidature</h3>
             <form className="benevolat-form" name="benevolat" method="POST" action="/" data-netlify="true" onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="benevolat" />
+              <input type="hidden" name="type_formulaire" value="Candidature Bénévole JNJ 2026" />
 
               <div className="form-group">
                 <label htmlFor="b-name">Nom et Prénom(s)</label>

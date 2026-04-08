@@ -69,6 +69,7 @@ const Registration = () => {
               onSubmit={handleSubmit}
             >
               <input type="hidden" name="form-name" value="inscription" />
+              <input type="hidden" name="type_formulaire" value="Pré-inscription JNJ 2026 (Pèlerin)" />
               <p className="hidden" style={{ display: 'none' }}>
                 <label>
                   Ne pas remplir ce champ si vous êtes humain : <input name="bot-field" />
