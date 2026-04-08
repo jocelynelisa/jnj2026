@@ -63,6 +63,7 @@ const Registration = () => {
               className="registration-form"
               name="inscription"
               method="POST"
+              action="/"
               data-netlify="true"
               netlify-honeypot="bot-field"
               onSubmit={handleSubmit}

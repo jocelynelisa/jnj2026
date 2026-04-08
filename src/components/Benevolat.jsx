@@ -103,7 +103,7 @@ const Benevolat = ({ onBack }) => {
             viewport={{ once: true }}
           >
             <h3 className="form-title text-center">Formulaire de candidature</h3>
-            <form className="benevolat-form" name="benevolat" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+            <form className="benevolat-form" name="benevolat" method="POST" action="/" data-netlify="true" onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="benevolat" />
 
               <div className="form-group">
