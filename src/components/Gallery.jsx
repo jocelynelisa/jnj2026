@@ -3,6 +3,13 @@ import './Gallery.css';
 import com0 from '../assets/com0.webp';
 import cet0 from '../assets/CET_togo 00.webp';
 import cet from '../assets/CET_togo.webp';
+import im0 from '../assets/im0.webp';
+import im1 from '../assets/im1.webp';
+import im2 from '../assets/im2.webp';
+import im3 from '../assets/im3.webp';
+import im4 from '../assets/im4.webp';
+import im5 from '../assets/im5.webp';
+import im6 from '../assets/im6.webp';
 
 const Gallery = () => {
   // Le nombre de photos à afficher par défaut
@@ -14,15 +21,15 @@ const Gallery = () => {
   // Pensez à juste rajouter les nouveaux objets à l'intérieur.
   const photos = [
     { id: 1, src: com0, alt: "Photo 1" },
-    { id: 2, src: "", alt: "Photo 2" },
+    { id: 2, src: im0, alt: "Photo 2" },
     { id: 3, src: cet, alt: "Photo 3" },
     { id: 4, src: cet0, alt: "Photo 4" },
-    { id: 5, src: "", alt: "Photo 5" },
-    { id: 6, src: "", alt: "Photo 6" },
-    { id: 7, src: "", alt: "Photo 7" },
-    { id: 8, src: "", alt: "Photo 8" },
-    { id: 9, src: "", alt: "Photo 9" },
-    { id: 10, src: "", alt: "Photo 10" },
+    { id: 5, src: im1, alt: "Photo 5" },
+    { id: 6, src: im2, alt: "Photo 6" },
+    { id: 7, src: im3, alt: "Photo 7" },
+    { id: 8, src: im4, alt: "Photo 8" },
+    { id: 9, src: im5, alt: "Photo 9" },
+    { id: 10, src: im6, alt: "Photo 10" },
     { id: 11, src: "", alt: "Photo 11" },
     { id: 12, src: "", alt: "Photo 12" },
   ];
