@@ -147,7 +147,8 @@
 }
 
 .circular-letter-card {
-  margin-top: var(--space-8);
+  margin: var(--space-8) auto 0;
+  max-width: 600px;
   cursor: pointer;
   position: relative;
   overflow: hidden;

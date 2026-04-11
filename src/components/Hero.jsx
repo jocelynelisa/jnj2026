@@ -1,12 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, ArrowRight } from 'lucide-react';
+import heroBg from '../assets/im1.webp';
 import './Hero.css';
 
 const Hero = () => {
   return (
     <section className="hero-section">
-      <div className="hero-background">
+      <div 
+        className="hero-background"
+        style={{ 
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroBg})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="hero-shape hero-shape-1"></div>
         <div className="hero-shape hero-shape-2"></div>
         <div className="hero-shape hero-shape-3"></div>
