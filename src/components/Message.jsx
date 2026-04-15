@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, X } from 'lucide-react';
-import lettreCirculaire from '../assets/Communiqué_Officiel_JNJ.png';
+import lettreCirculaire from '../assets/Communiqué_Officiel_JNJ.jpeg';
 import './Message.css';
 
 const Message = () => {

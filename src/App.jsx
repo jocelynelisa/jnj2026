@@ -11,6 +11,7 @@ import Gallery from './components/Gallery';
 import Map from './components/Map';
 import Footer from './components/Footer';
 import Benevolat from './components/Benevolat';
+import DonationFAB from './components/DonationFAB';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -55,6 +56,7 @@ function App() {
       </main>
 
       <Footer />
+      <DonationFAB />
     </div>
   );
 }

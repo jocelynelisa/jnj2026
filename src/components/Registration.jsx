@@ -147,7 +147,7 @@ const Registration = () => {
                   <p>
                     Merci pour votre Pré-inscription, les paiements se font sur les numéros{' '}
                     <span className="toast-number">(+228) 97-97-60-63</span> | <span className="toast-number">90-11-33-12</span>
-                    {' '}avec une capture d'écran à l'appui sur whatsapp et vous recevrez l'attestation d'inscription.
+                    {' '}avec une capture d'écran du paiement (2500F + frais de retrait) à l'appui sur whatsapp et vous recevrez l'attestation d'inscription.
                   </p>
                 </div>
                 <button className="toast-close" onClick={() => setIsSubmitted(false)} aria-label="Fermer">
