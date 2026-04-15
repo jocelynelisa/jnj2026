@@ -16,9 +16,9 @@ const Program = () => {
   const schedule = {
     1: [
       { time: "Matin", title: "Messe d'envoi des pèlerins dans les diocèses", location: "Divers sites d'hébergement", type: "logistics" },
-      { time: "13H 00 - 19 H00", title: "Accueil et installation des pèlerins", location: "Paroisses d'accueil", type: "spiritual" },
-      { time: "19 H 00 - 20 H30", title: "Dîner", location: "Sites d'hébergement", type: "logistics" },
-      { time: "20 H 30 - 23H30", title: "Veillée d'intégration sur les paroisses d'accueil", location: "Place des fêtes", type: "cultural" }
+      { time: "13:00 - 19:00", title: "Accueil et installation des pèlerins", location: "Paroisses d'accueil", type: "spiritual" },
+      { time: "19:00 - 20:30", title: "Dîner", location: "Sites d'hébergement", type: "logistics" },
+      { time: "20:30 - 23:30", title: "Veillée d'intégration sur les paroisses d'accueil", location: "Place des fêtes", type: "cultural" }
     ],
     2: [
       { time: "05:00 - 06:00", title: "Réveil", location: "Sites d'hébergement", type: "logistics" },
