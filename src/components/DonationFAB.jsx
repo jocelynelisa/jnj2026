@@ -27,16 +27,16 @@ const DonationFAB = () => {
             <X size={20} />
           </button>
         </div>
-        
+
         <div className="vignette-body">
           <div className="donation-section">
             <div className="payment-methods">
-              <strong>FLOOZ : +228 97976063 | MIXX by YAS : +228 91734692</strong>
+              <strong>FLOOZ : +228 97976063 | MIXX by YAS : +228 90113312</strong>
             </div>
           </div>
 
           <div className="divider"></div>
-          
+
           <div className="donation-section">
             <div className="payment-methods">
               <strong>Western Union | Ria :</strong>
@@ -45,10 +45,10 @@ const DonationFAB = () => {
               <p className="contact-name">ASSIGNON Kokouvi Eli</p>
               <p className="contact-phone">+228 91 50 55 00</p>
             </div>
-            <a 
-              href="https://wa.me/22891734692?text=Bonjour%2C%20j%27aimerais%20faire%20un%20don" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://wa.me/22891734692?text=Bonjour%2C%20j%27aimerais%20faire%20un%20don"
+              target="_blank"
+              rel="noopener noreferrer"
               className="whatsapp-btn"
             >
               <MessageCircle size={16} />
@@ -59,8 +59,8 @@ const DonationFAB = () => {
       </div>
 
       {/* Floating Button */}
-      <button 
-        className={`fab-button ${isOpen ? 'active' : ''}`} 
+      <button
+        className={`fab-button ${isOpen ? 'active' : ''}`}
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Faire un don"
       >
