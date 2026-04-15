@@ -23,22 +23,22 @@ const Map = () => {
               <li className="location-item">
                 <MapPin size={18} className="location-icon" />
                 <div className="location-text">
-                  <strong>Cathédrale Notre-Dame de la Trinité</strong>
+                  <strong>Cathédrale Ste Trinité: Aného + Sokodé</strong>
                   <span>Accueil : Diocèse Aneho et Diocèse de Sokodé+ une partie du diocèse d'Atakpamé.</span>
                 </div>
               </li>
               <li className="location-item">
                 <MapPin size={18} className="location-icon" />
                 <div className="location-text">
-                  <strong>Paroisse Sainte famille d'Atakpamé </strong>
-                  <span>Accueil: Archidiocèse de Lomé, diocèse de Kpalimé et une partie d'Atakpamé.</span>
+                  <strong>Paroisse Saint Jean Paul 2: Kara + Lomé</strong>
+                  <span>Accueille : Diocèse de Dapaong, diocèse de Kara et les reste d'Atakpamé.</span>
                 </div>
               </li>
               <li className="location-item">
                 <MapPin size={18} className="location-icon" />
                 <div className="location-text">
-                  <strong>Paroisse Saint Jean Paul 2</strong>
-                  <span>Accueille : Diocèse de Dapaong, diocèse de Kara et les reste d'Atakpamé.</span>
+                  <strong>Paroisse Sainte famille: Kpalimé + Dapaong </strong>
+                  <span>Accueil: Archidiocèse de Lomé, diocèse de Kpalimé et une partie d'Atakpamé.</span>
                 </div>
               </li>
             </ul>
