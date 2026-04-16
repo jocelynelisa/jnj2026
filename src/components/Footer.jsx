@@ -14,7 +14,7 @@ const Footer = () => {
               JNJ Atakpamé <span>2026</span>
             </h2>
             <p className="footer-desc">
-              Les Journées Nationales de la Jeunesse Catholique du Togo. 
+              Les Journées Nationales de la Jeunesse Catholique du Togo.
               Un grand rassemblement de foi, d'espérance et de fraternité.
             </p>
             <div className="social-links">
@@ -50,8 +50,10 @@ const Footer = () => {
             <address className="footer-address">
               <p>Diocèse d'Atakpamé</p>
               <p>Coordination des JNJ</p>
-              <p>BP: XXX, Atakpamé, Togo</p>
-              <p className="contact-email">contact@jnj-atakpame2026.tg</p>
+              <p>Tel: +228 99 99 99 99
+                +228 99 99 99 99
+              </p>
+              <p className="contact-email"> [EMAIL_ADDRESS]</p>
             </address>
           </div>
         </div>
