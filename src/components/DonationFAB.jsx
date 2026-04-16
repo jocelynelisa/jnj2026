@@ -64,7 +64,7 @@ const DonationFAB = () => {
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Faire un don"
       >
-        <Heart className="heart-icon" size={24} fill={isOpen ? "white" : "none"} />
+        <Heart className="heart-icon" size={24} fill="white" />
         <span className="fab-text">Faire un don</span>
       </button>
     </div>
