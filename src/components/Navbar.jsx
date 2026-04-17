@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
-
+import logoJnj from '../assets/logo_jnj.png';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,7 +26,8 @@ const Navbar = () => {
     <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <a href="#" className="nav-logo">
-          JNJ Atakpamé <span className="logo-year">2026</span>
+          <img src={logoJnj} alt="Logo JNJ 2026" className="nav-logo-img" />
+          <span>JNJ Atakpamé <span className="logo-year">2026</span></span>
         </a>
 
         {/* Desktop Navigation */}
@@ -36,6 +37,9 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+          <a href="#benevolat" className="btn btn-outline nav-btn">
+            Bénévolat
+          </a>
           <a href="#inscription" className="btn btn-primary nav-btn">
             Inscription
           </a>
@@ -63,6 +67,13 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+          <a 
+            href="#benevolat" 
+            className="btn btn-outline mobile-nav-btn"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Bénévolat
+          </a>
           <a 
             href="#inscription" 
             className="btn btn-primary mobile-nav-btn"

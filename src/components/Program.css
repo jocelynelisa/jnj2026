@@ -143,7 +143,7 @@
 
 .type-spiritual .timeline-dot { border-color: var(--color-primary); }
 .type-cultural .timeline-dot { border-color: var(--color-accent); }
-.type-main .timeline-dot { border-color: hsl(350, 80%, 60%); }
+.type-main .timeline-dot { border-color: var(--color-danger); }
 .type-logistics .timeline-dot { border-color: var(--color-text-muted); }
 
 .timeline-content {

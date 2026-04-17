@@ -1,13 +1,40 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jnj2026</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/src/assets/jnj_logo2.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jnj2026</title>
+</head>
+
+<body>
+  <!-- A little help for Netlify Forms bots -->
+  <form name="inscription" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/" hidden>
+    <input type="hidden" name="form-name" value="inscription" />
+    <input type="hidden" name="type_formulaire" value="Pré-inscription JNJ 2026 (Pèlerin)" />
+    <input type="text" name="bot-field" />
+    <input type="text" name="nom" />
+    <select name="diocese"></select>
+    <input type="text" name="paroisse" />
+    <input type="tel" name="telephone" />
+    <input type="number" name="age" />
+    <input type="checkbox" name="consentement" />
+  </form>
+
+  <form name="benevolat" method="POST" data-netlify="true" action="/" hidden>
+    <input type="hidden" name="form-name" value="benevolat" />
+    <input type="hidden" name="type_formulaire" value="Candidature Bénévole JNJ 2026" />
+    <input type="text" name="nom" />
+    <input type="tel" name="telephone" />
+    <select name="diocese"></select>
+    <select name="domaine"></select>
+    <textarea name="message"></textarea>
+    <input type="checkbox" name="consentement" />
+  </form>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
