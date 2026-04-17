@@ -56,18 +56,11 @@ const Footer = () => {
           <div className="footer-contact">
             <h3 className="footer-heading">Contact</h3>
             <address className="footer-address">
-<<<<<<< HEAD
-              <p>Diocèse d'Atakpamé</p>
-              <p>Coordination des JNJ</p>
-              <p>Tel: +228 99 99 99 99
-                +228 99 99 99 99
+              <p>R.P. George Gauthier AMEDONOU (Aumônier National) +228 93 54 57 76</p>
+              <p>M. Crépin ASSIGNON (Président National) +228 91 50 55 00</p>
+              <p className="contact-email">
+                <a href="mailto:jnjtogo2026@gmail.com">jnjtogo2026@gmail.com</a>
               </p>
-              <p className="contact-email"> [EMAIL_ADDRESS]</p>
-=======
-              <p>R.P. George Gauthier AMEDONOU (Aumônier National) 93 54 57 76</p>
-              <p>M. Crépin ASSIGNON (Président National) 91 50 55 00</p>
-              <p className="contact-email">jnjtogo2026@gmail.com</p>
->>>>>>> 061e383c07751861f92f132d421686af98dd22d7
             </address>
           </div>
         </div>
