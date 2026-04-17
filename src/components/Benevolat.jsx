@@ -25,7 +25,7 @@ const Benevolat = ({ onBack }) => {
       .then(() => {
         setIsSubmitted(true);
         myForm.reset();
-        setTimeout(() => setIsSubmitted(false), 15000);
+        setTimeout(() => setIsSubmitted(false), 120000);
       })
       .catch((error) => alert(error));
   };

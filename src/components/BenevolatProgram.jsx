@@ -16,48 +16,48 @@ const BenevolatProgram = () => {
 
   const schedule = {
     1: [
-      { time: "15:00 - 17:00", title: "Accueil et installation des bénévoles", location: "Site principal", type: "logistics" },
-      { time: "17:30 - 19:00", title: "Messe de lancement avec les bénévoles à la Cathédrale Sainte Trinité", location: "Lieu de culte", type: "spiritual" },
-      { time: "19:00 - 20:00", title: "Dîner", location: "Espace restauration", type: "logistics" },
-      { time: "20:00 - 21:00", title: "Contact et Consignes pour les dispositions pratiques", location: "Espace restauration", type: "logistics" },
-      { time: "21:00", title: "Départ pour les lieux d'hébergement", location: "Hébergements", type: "logistics" }
+      { time: "15:00 - 17:00", title: "Accueil et installation des bénévoles", location: "Cathédrale Sainte Trinité", type: "logistics" },
+      { time: "17:30 - 19:00", title: "Messe de lancement avec les bénévoles à la Cathédrale Sainte Trinité", location: "Cathédrale Sainte Trinité", type: "spiritual" },
+      { time: "19:00 - 20:00", title: "Dîner", location: "Cathédrale Sainte Trinité", type: "logistics" },
+      { time: "20:00 - 21:00", title: "Contact et Consignes pour les dispositions pratiques", location: "Cathédrale Sainte Trinité", type: "logistics" },
+      { time: "21:00", title: "Départ pour les lieux d'hébergement", location: "Cathédrale Sainte Trinité", type: "logistics" }
     ],
     2: [
-      { time: "Matin", title: "Messe d'envoi des pèlerins dans les diocèses", location: "Divers sites d'hébergement", type: "logistics" },
+      { time: "Matin", title: "Messe d'envoi des pèlerins dans les diocèses", location: "Dans chaque diocèse", type: "logistics" },
       { time: "13:00 - 19:00", title: "Accueil et installation des pèlerins", location: "Paroisses d'accueil", type: "spiritual" },
-      { time: "19:00 - 20:30", title: "Dîner", location: "Sites d'hébergement", type: "logistics" },
-      { time: "20:30 - 23:30", title: "Veillée d'intégration sur les paroisses d'accueil", location: "Place des fêtes", type: "cultural" }
+      { time: "19:00 - 20:30", title: "Dîner", location: "Paroisses d'accueil", type: "logistics" },
+      { time: "20:30 - 23:30", title: "Veillée d'intégration sur les paroisses d'accueil", location: "Paroisses d'accueil", type: "cultural" }
     ],
     3: [
-      { time: "05:00 - 06:00", title: "Réveil", location: "Sites d'hébergement", type: "logistics" },
-      { time: "06:15 - 07:00", title: "Petit déjeuner", location: "Sites d'hébergement", type: "logistics" },
-      { time: "07:15 - 08:00", title: "Animation culturelle", location: "Divers sites", type: "cultural" },
+      { time: "05:00 - 06:00", title: "Réveil", location: "Paroisses d'accueil", type: "logistics" },
+      { time: "06:15 - 07:00", title: "Petit déjeuner", location: "Paroisses d'accueil", type: "logistics" },
+      { time: "07:15 - 08:00", title: "Animation culturelle", location: "Paroisses d'accueil", type: "cultural" },
       { time: "07:30 - 09:00", title: "Confession dans les paroisses d'accueil", location: "Paroisses d'accueil", type: "spiritual" },
       { time: "09:00 - 10:30", title: "Catéchèse sur les paroisses d'accueil", location: "Paroisses d'accueil", type: "spiritual" },
       { time: "10:45 - 12:15", title: "Célébration Eucharistique", location: "Paroisses d'accueil", type: "spiritual" },
-      { time: "12:30 - 14:00", title: "Déjeuner", location: "Sites d'hébergement", type: "logistics" },
-      { time: "14:30 - 16:30", title: "Ateliers de formation à la Cathédrale Sainte Trinité", location: "Centres de formation", type: "main" },
+      { time: "12:30 - 14:00", title: "Déjeuner", location: "Paroisses d'accueil", type: "logistics" },
+      { time: "14:30 - 16:30", title: "Ateliers de formation à la Cathédrale Sainte Trinité", location: "Cathédrale Sainte Trinité", type: "main" },
       { time: "16:00 - 16:30", title: "Célébration pénitentielle à la Cathédrale Sainte Trinité", location: "Cathédrale Sainte Trinité", type: "spiritual" },
-      { time: "17:00 - 18:30", title: "Chemin de croix", location: "Parcours dédié", type: "spiritual" },
+      { time: "17:00 - 18:30", title: "Chemin de croix", location: "Cathédrale Sainte Trinité", type: "spiritual" },
       { time: "18:45 - 19:30", title: "Procession et vénération des reliques de Saint Carlos Accutis", location: "Cathédrale Sainte Trinité", type: "spiritual" },
-      { time: "19:30 - 20:30", title: "Dîner", location: "Sites d'hébergement", type: "logistics" },
-      { time: "21:00", title: "Retour sur le site d'accueil", location: "Sites d'hébergement", type: "logistics" }
+      { time: "19:30 - 20:30", title: "Dîner", location: "Cathédrale Sainte Trinité", type: "logistics" },
+      { time: "21:00", title: "Retour sur le site d'accueil", location: "Paroisses d'accueil", type: "logistics" }
     ],
     4: [
-      { time: "05:00 - 06:00", title: "Réveil", location: "Sites d'hébergement", type: "logistics" },
-      { time: "06:15 - 07:00", title: "Petit déjeuner", location: "Sites d'hébergement", type: "logistics" },
-      { time: "07:15 - 08:45", title: "Célébration Eucharistique", location: "Diverses zones", type: "spiritual" },
+      { time: "05:00 - 06:00", title: "Réveil", location: "Paroisses d'accueil", type: "logistics" },
+      { time: "06:15 - 07:00", title: "Petit déjeuner", location: "Paroisses d'accueil", type: "logistics" },
+      { time: "07:15 - 08:45", title: "Célébration Eucharistique", location: "Paroisses d'accueil", type: "spiritual" },
       { time: "09:00 - 14:00", title: "Visite touristique + Déjeuner", location: "Lieux de célébration", type: "spiritual" },
-      { time: "14:00 - 17:15", title: "Village des talents catholiques", location: "À travers la ville", type: "cultural" },
-      { time: "17:00 - 18:00", title: "Adoration du Saint Sacrement", location: "Site dédié", type: "cultural" },
-      { time: "18:00 - 20:00", title: "Angelus + Enseignement", location: "Sites d'hébergement", type: "logistics" },
-      { time: "20:00 - 21:00", title: "Dîner", location: "Lieu de rassemblement", type: "spiritual" },
-      { time: "21:00 - 00:00", title: "Village des talents catholiques", location: "Lieu de rassemblement", type: "spiritual" }
+      { time: "14:00 - 17:15", title: "Village des talents catholiques", location: "Cathédrale Sainte Trinité", type: "cultural" },
+      { time: "17:00 - 18:00", title: "Adoration du Saint Sacrement", location: "Cathédrale Sainte Trinité", type: "cultural" },
+      { time: "18:00 - 20:00", title: "Angelus + Enseignement", location: "Cathédrale Sainte Trinité", type: "logistics" },
+      { time: "20:00 - 21:00", title: "Dîner", location: "Cathédrale Sainte Trinité", type: "spiritual" },
+      { time: "21:00 - 00:00", title: "Village des talents catholiques", location: "Cathédrale Sainte Trinité", type: "spiritual" }
     ],
     5: [
-      { time: "00:00 - 03:00", title: "Concert Gospel", location: "Scène principale", type: "cultural" },
-      { time: "07:00 - 09:00", title: "Messe solennelle de clôture avec tous les Evêques", location: "Grand lieu", type: "spiritual" },
-      { time: "11:00", title: "Déjeuner + Départ progressif des délégations diocésaines", location: "Sites d'hébergement", type: "logistics" },
+      { time: "00:00 - 03:00", title: "Concert Gospel", location: "Cathédrale Sainte Trinité", type: "cultural" },
+      { time: "07:00 - 09:00", title: "Messe solennelle de clôture avec tous les Evêques", location: "Cathédrale Sainte Trinité", type: "spiritual" },
+      { time: "11:00", title: "Déjeuner + Départ progressif des délégations diocésaines", location: "Cathédrale Sainte Trinité", type: "logistics" },
     ]
   };
 

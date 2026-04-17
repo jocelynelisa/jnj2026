@@ -19,7 +19,7 @@ const Registration = () => {
       .then(() => {
         setIsSubmitted(true);
         form.reset();
-        setTimeout(() => setIsSubmitted(false), 15000); // hide after 15s
+        setTimeout(() => setIsSubmitted(false), 120000); // hide after 120s (2 mins)
       })
       .catch((error) => console.error(error));
   };
