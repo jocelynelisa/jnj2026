@@ -7,6 +7,7 @@ import './Benevolat.css';
 
 const Benevolat = ({ onBack }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [selectedDiocese, setSelectedDiocese] = useState("");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -119,7 +120,14 @@ const Benevolat = ({ onBack }) => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="b-diocese">Diocèse</label>
-                  <select id="b-diocese" name="diocese" required className="form-input">
+                  <select 
+                    id="b-diocese" 
+                    name="diocese" 
+                    required 
+                    className="form-input"
+                    value={selectedDiocese}
+                    onChange={(e) => setSelectedDiocese(e.target.value)}
+                  >
                     <option value="">Sélectionnez</option>
                     <option value="lome">Lomé</option>
                     <option value="aneho">Aného</option>
@@ -128,7 +136,13 @@ const Benevolat = ({ onBack }) => {
                     <option value="sokode">Sokodé</option>
                     <option value="kara">Kara</option>
                     <option value="dapaong">Dapaong</option>
+                    <option value="autre">Autre</option>
                   </select>
+                  {selectedDiocese === 'autre' && (
+                    <div style={{ marginTop: '15px' }}>
+                      <input type="text" id="b-autre_diocese" name="autre_diocese" placeholder="Précisez votre diocèse" className="form-input" required />
+                    </div>
+                  )}
                 </div>
               </div>
 
