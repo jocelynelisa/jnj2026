@@ -126,7 +126,7 @@ const Registration = () => {
 
                 <div className="form-group">
                   <label htmlFor="age">Âge</label>
-                  <input type="number" id="age" name="age" min="15" max="35" placeholder="18" className="form-input" required />
+                  <input type="number" id="age" name="age" min="13" max="100" placeholder="18" className="form-input" required />
                 </div>
               </div>
 

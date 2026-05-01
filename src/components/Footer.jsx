@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Heart } from 'lucide-react';
+import { Instagram, Heart, Facebook } from 'lucide-react';
 import twitterIcon from '../assets/twitter-x.svg';
 import whatsappIconUrl from '../assets/whatsapp.svg';
 import './Footer.css';
@@ -30,6 +30,9 @@ const Footer = () => {
               <a href="https://www.instagram.com/jnjatakpame2026/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
+              <a href="https://www.facebook.com/share/18Z6DVw52p/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
+                <Facebook size={20} />
+              </a>
             </div>
           </div>
 
@@ -56,9 +59,11 @@ const Footer = () => {
           <div className="footer-contact">
             <h3 className="footer-heading">Contact</h3>
             <address className="footer-address">
-              <p>R.P. George Gauthier AMEDONOU (Aumônier National) 93 54 57 76</p>
-              <p>M. Crépin ASSIGNON (Président National) 91 50 55 00</p>
-              <p className="contact-email">jnjtogo2026@gmail.com</p>
+              <p>R.P. George Gauthier AMEDONOU (Aumônier National) +228 93 54 57 76</p>
+              <p>M. Crépin ASSIGNON (Président National) +228 91 50 55 00</p>
+              <p className="contact-email">
+                <a href="mailto:jnjtogo2026@gmail.com">jnjtogo2026@gmail.com</a>
+              </p>
             </address>
           </div>
         </div>
