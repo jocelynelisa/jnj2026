@@ -17,7 +17,7 @@ const Benevolat = ({ onBack }) => {
     e.preventDefault();
     const myForm = e.target;
     const formData = new FormData(myForm);
-    
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -97,7 +97,7 @@ const Benevolat = ({ onBack }) => {
 
           <BenevolatProgram />
 
-          <motion.div 
+          <motion.div
             className="benevolat-form-container glass-card"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -120,10 +120,10 @@ const Benevolat = ({ onBack }) => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="b-diocese">Diocèse</label>
-                  <select 
-                    id="b-diocese" 
-                    name="diocese" 
-                    required 
+                  <select
+                    id="b-diocese"
+                    name="diocese"
+                    required
                     className="form-input"
                     value={selectedDiocese}
                     onChange={(e) => setSelectedDiocese(e.target.value)}
@@ -147,19 +147,6 @@ const Benevolat = ({ onBack }) => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="domain">Domaine de préférence</label>
-                <select id="domain" name="domaine" required className="form-input">
-                  <option value="">Choisissez un domaine</option>
-                  <option value="accueil">Accueil et Orientation</option>
-                  <option value="logistique">Logistique</option>
-                  <option value="secourisme">Secourisme / Santé</option>
-                  <option value="liturgie">Animation et Liturgie</option>
-                  <option value="communication">Communication</option>
-                  <option value="autre">Autre</option>
-                </select>
-              </div>
-
-              <div className="form-group">
                 <label htmlFor="message">Motivations / Compétences particulières</label>
                 <textarea id="message" name="message" rows="3" className="form-input"></textarea>
               </div>
@@ -178,7 +165,7 @@ const Benevolat = ({ onBack }) => {
           </motion.div>
         </div>
       </section>
-      
+
       <AnimatePresence>
         {isSubmitted && (
           <motion.div
