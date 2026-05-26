@@ -100,8 +100,10 @@ const Hebergement = () => {
     <section id="hebergement" className="section hebergement-section">
       <div className="container">
         <div className="section-header text-center">
-          <span className="section-subtitle-badge">Logement Individuel</span>
           <h2 className="section-title">Hébergement & Infos</h2>
+          <div className="section-subtitle-badge-wrapper">
+            <span className="section-subtitle-badge">Logement Individuel</span>
+          </div>
           <p className="section-description mx-auto max-w-2xl">
             Pour les pèlerins qui ne souhaitent pas être en logement collectif, découvrez les offres d'hébergement spéciales et les informations pratiques à retenir absolument.
           </p>

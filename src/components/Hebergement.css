@@ -7,6 +7,12 @@
 }
 
 /* Badge at top of section */
+.section-subtitle-badge-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-6);
+}
+
 .section-subtitle-badge {
   display: inline-block;
   background-color: rgba(1, 104, 73, 0.1);
@@ -18,8 +24,11 @@
   letter-spacing: 1px;
   padding: 0.35rem 1rem;
   border-radius: 50px;
-  margin-bottom: var(--space-3);
   border: 1px solid rgba(1, 104, 73, 0.2);
+}
+
+.hebergement-section .section-title {
+  margin-bottom: var(--space-6);
 }
 
 .hebergement-grid {
