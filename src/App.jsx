@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Pourquoi from './components/Pourquoi';
 import Message from './components/Message';
 import Program from './components/Program';
+import Hebergement from './components/Hebergement';
 import Registration from './components/Registration';
 import Partners from './components/Partners';
 import Guide from './components/Guide';
@@ -47,6 +48,7 @@ function App() {
         <Hero />
         <Pourquoi />
         <Message />
+        <Hebergement />
         <Program />
         <Registration />
         <Partners />

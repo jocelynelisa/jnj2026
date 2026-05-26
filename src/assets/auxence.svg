@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 145" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&amp;display=swap');
+      .brand-text {
+        font-family: 'Montserrat', 'Inter', -apple-system, sans-serif;
+        font-weight: 800;
+        fill: #000000;
+        font-size: 105px;
+        letter-spacing: -3px;
+      }
+    </style>
+    <clipPath id="box-clip">
+      <path d="M 32,0 L 78,0 A 12,12 0 0,1 90,12 L 90,78 A 32,32 0 0,1 58,110 L 12,110 A 12,12 0 0,1 0,98 L 0,32 A 32,32 0 0,1 32,0 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- "au" -->
+  <text x="10" y="108" class="brand-text">au</text>
+
+  <!-- Stylized "X" Box -->
+  <g transform="translate(145, 16)">
+    <!-- Clipped background and white X -->
+    <g clip-path="url(#box-clip)">
+      <!-- Left purple half -->
+      <rect x="0" y="0" width="45" height="110" fill="#3B326B" />
+      <!-- Right orange half -->
+      <rect x="45" y="0" width="45" height="110" fill="#E87D0B" />
+      
+      <!-- White crossing lines for the X -->
+      <line x1="-10" y1="-10" x2="100" y2="110" stroke="#FFFFFF" stroke-width="20" stroke-linecap="square" />
+      <line x1="-10" y1="110" x2="100" y2="-10" stroke="#FFFFFF" stroke-width="20" stroke-linecap="square" />
+    </g>
+  </g>
+
+  <!-- "ence" -->
+  <text x="250" y="108" class="brand-text">ence</text>
+</svg>

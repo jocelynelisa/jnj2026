@@ -1,9 +1,11 @@
 import React from 'react';
 import './Partners.css';
+import gakLogo from '../assets/gak_logo.jpg';
+import auxenceLogo from '../assets/auxence.svg';
 
 const PARTNERS = [
-  { id: 1, name: "Partenaire 1" },
-  { id: 2, name: "Partenaire 2" },
+  { id: 1, name: "GAK Formation", image: gakLogo },
+  { id: 2, name: "Auxence", image: auxenceLogo },
   { id: 3, name: "Partenaire 3" },
   { id: 4, name: "Partenaire 4" },
   { id: 5, name: "Partenaire 5" },
@@ -26,8 +28,15 @@ const Partners = () => {
             {PARTNERS.map((partner) => (
               <div key={`first-${partner.id}`} className="partner-slide">
                 <div className="partner-placeholder">
-                  {/* Replace this div with an <img> tag when you have photos */}
-                  <span>{partner.name}</span>
+                  {partner.image ? (
+                    <img 
+                      src={partner.image} 
+                      alt={partner.name} 
+                      className="partner-img"
+                    />
+                  ) : (
+                    <span>{partner.name}</span>
+                  )}
                 </div>
               </div>
             ))}
@@ -35,7 +44,15 @@ const Partners = () => {
             {PARTNERS.map((partner) => (
               <div key={`second-${partner.id}`} className="partner-slide">
                 <div className="partner-placeholder">
-                  <span>{partner.name}</span>
+                  {partner.image ? (
+                    <img 
+                      src={partner.image} 
+                      alt={partner.name} 
+                      className="partner-img"
+                    />
+                  ) : (
+                    <span>{partner.name}</span>
+                  )}
                 </div>
               </div>
             ))}
