@@ -15,38 +15,36 @@ const Program = () => {
 
   const schedule = {
     1: [
-      { time: "Matin", title: "Messe d'envoi des pèlerins dans les diocèses", location: "Dans chaque diocèse", type: "logistics" },
       { time: "13:00 - 19:00", title: "Accueil et installation des pèlerins", location: "Paroisses d'accueil", type: "spiritual" },
-      { time: "19:00 - 20:30", title: "Dîner", location: "Paroisses d'accueil", type: "logistics" },
-      { time: "20:30 - 23:30", title: "Veillée d'intégration sur les paroisses d'accueil", location: "Paroisses d'accueil", type: "cultural" }
+      { time: "19:00 - 23:30", title: "Diner + Soirée d’intégration culturelle sur chaque site d’hébergement. ", location: "Paroisses d'accueil", type: "logistics" },
+
     ],
     2: [
-      { time: "05:30 - 08:00", title: "Réveil + Animation sportive", location: "Paroisses d'accueil", type: "logistics" },
-      { time: "08:00 - 09:30", title: "Petit déjeuner", location: "Paroisses d'accueil", type: "logistics" },
-      { time: "09:30 - 11:00", title: "Catéchèse sur les paroisses d'accueil", location: "Paroisses d'accueil", type: "spiritual" },
-      { time: "11:00 - 12:30", title: "Célébration Eucharistique", location: "Paroisses d'accueil", type: "spiritual" },
-      { time: "12:30 - 15:00", title: "Déjeuner + Repos", location: "Paroisses d'accueil", type: "logistics" },
-      { time: "15:00 - 16:00", title: "Ateliers de formation pratique à la Cathédrale Sainte Trinité", location: "Cathédrale Sainte Trinité", type: "main" },
-      { time: "16:00 - 16:30", title: "Célébration pénitentielle à la Cathédrale Sainte Trinité", location: "Cathédrale Sainte Trinité", type: "spiritual" },
-      { time: "16:30 - 18:30", title: "COnfession", location: "Cathédrale Sainte Trinité", type: "spiritual" },
-      { time: "18:30 - 20:30", title: "Chemin de croix suivi de vénération des reliques de Saint Carlos Accutis", location: "Cathédrale Sainte Trinité", type: "spiritual" },
+      { time: "05:30 - 07:30", title: "Réveil + Prière matinale ", location: "Paroisses d'accueil", type: "logistics" },
+      { time: "08:00 - 09:00", title: "Petit déjeuner", location: "Paroisses d'accueil", type: "logistics" },
+      { time: "10:00 - 12:30", title: "Messe d’ouverture des JNJ Atakpamé à la Cathédrale Sainte Trinité ", location: "Cathédrale Sainte Trinité", type: "spiritual" },
+      { time: "13:00 - 15:00", title: "Déjeuner + Repos", location: "Paroisses d'accueil", type: "logistics" },
+      { time: "15:00 - 16:00", title: "Ateliers de formation pratique", location: "Cathédrale Sainte Trinité", type: "main" },
+      { time: "16:00 - 17:30", title: "Catéchèse sur le thème « Entre espoir et désespoir dans la vie des jeunes togolais » ", location: "Cathédrale Sainte Trinité", type: "spiritual" },
+      { time: "17:30 - 20:00", title: "Célébration pénitentielle + Confession + Chemin de croix ", location: "Cathédrale Sainte Trinité", type: "spiritual" },
       { time: "20:30 - 22:00", title: "Dîner", location: "Cathédrale Sainte Trinité", type: "logistics" },
       { time: "22:00", title: "Retour sur le site d'accueil", location: "Paroisses d'accueil", type: "logistics" }
     ],
     3: [
-      { time: "05:30 - 07:00", title: "Réveil + Animation Sportive ", location: "Paroisses d'accueil", type: "logistics" },
+      { time: "05:30 - 07:00", title: "Réveil + prière matinale + animation Sportive", location: "Paroisses d'accueil", type: "logistics" },
       { time: "07:00 - 08:00", title: "Petit déjeuner", location: "Paroisses d'accueil", type: "logistics" },
-      { time: "08:00 - 09:00", title: "Célébration Eucharistique", location: "Paroisses d'accueil", type: "spiritual" },
-      { time: "09:00 - 14:00", title: "Visite touristique + Déjeuner", location: "A travers la ville", type: "spiritual" },
+      { time: "08:00 - 09:00", title: "Célébration Eucharistique sur les paroisses d’accueil ", location: "Paroisses d'accueil", type: "spiritual" },
+      { time: "09:00 - 13:00", title: "Visite touristique libre ", location: "A travers la ville", type: "cultural" },
+      { time: "13:00 - 14:00", title: "Déjeuner", location: "Paroisses d'accueil", type: "logistics" },
       { time: "14:00 - 16:00", title: "Ouverture + visite officielle du village des talents catholiques", location: "Cathédrale Sainte Trinité", type: "cultural" },
       { time: "16:00 - 18:00", title: "Parade culturelle des Diocèses du Togo", location: "Cathédrale Sainte Trinité", type: "cultural" },
-      { time: "18:00 - 20:00", title: "Angelus + Enseignement + Adoration du Saint Sacrement", location: "Cathédrale Sainte Trinité", type: "logistics" },
+      { time: "18:00 - 20:00", title: "Angelus + Exhortation sur le thème général + Adoration du Saint Sacrement ", location: "Cathédrale Sainte Trinité", type: "logistics" },
       { time: "20:00 - 21:00", title: "Dîner", location: "Cathédrale Sainte Trinité", type: "spiritual" },
       { time: "21:00 - 00:00", title: "Visite + échanges B to B dans le village des talents catholiques", location: "Cathédrale Sainte Trinité", type: "spiritual" }
     ],
     4: [
       { time: "00:00 - 03:00", title: "Concert Gospel", location: "Cathédrale Sainte Trinité", type: "cultural" },
-      { time: "07:00 - 09:00", title: "Messe solennelle de clôture avec tous les Evêques", location: "Cathédrale Sainte Trinité", type: "spiritual" },
+      { time: "07:00 - 09:00", title: "Messe pontificale concélébrée de clôture", location: "Cathédrale Sainte Trinité", type: "spiritual" },
       { time: "11:00", title: "Déjeuner + Départ progressif des délégations diocésaines", location: "Cathédrale Sainte Trinité", type: "logistics" },
     ]
   };
