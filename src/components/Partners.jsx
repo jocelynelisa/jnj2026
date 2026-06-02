@@ -2,11 +2,12 @@ import React from 'react';
 import './Partners.css';
 import gakLogo from '../assets/gak_logo.jpg';
 import auxenceLogo from '../assets/auxence.svg';
+import cenccsLogo from '../assets/cenccs.png';
 
 const PARTNERS = [
   { id: 1, name: "GAK Formation", image: gakLogo },
   { id: 2, name: "Auxence", image: auxenceLogo },
-  { id: 3, name: "Partenaire 3" },
+  { id: 3, name: "CENCCS", image: cenccsLogo },
   { id: 4, name: "Partenaire 4" },
   { id: 5, name: "Partenaire 5" },
   { id: 6, name: "Partenaire 6" },
