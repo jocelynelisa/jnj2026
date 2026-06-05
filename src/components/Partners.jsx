@@ -3,12 +3,13 @@ import './Partners.css';
 import gakLogo from '../assets/gak_logo.jpg';
 import auxenceLogo from '../assets/auxence.svg';
 import cenccsLogo from '../assets/cenccs.png';
+import radioMariaLogo from '../assets/radio_maria.jpg';
 
 const PARTNERS = [
   { id: 1, name: "GAK Formation", image: gakLogo },
   { id: 2, name: "Auxence", image: auxenceLogo },
   { id: 3, name: "CENCCS", image: cenccsLogo },
-  { id: 4, name: "Partenaire 4" },
+  { id: 4, name: "Radio Maria", image: radioMariaLogo },
   { id: 5, name: "Partenaire 5" },
   { id: 6, name: "Partenaire 6" },
   { id: 7, name: "Partenaire 7" },
