@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ChevronLeft, 
-  ChevronRight, 
-  Play, 
-  Pause, 
-  ZoomIn, 
-  X, 
-  Phone, 
-  MessageSquare, 
-  Info, 
-  Home, 
+import {
+  ChevronLeft,
+  ChevronRight,
+  Play,
+  Pause,
+  ZoomIn,
+  X,
+  Phone,
+  MessageSquare,
+  Info,
+  Home,
   AlertCircle,
   Download
 } from 'lucide-react';
@@ -21,8 +21,8 @@ import './Hebergement.css';
 
 const slides = [
   { id: 1, img: img1, title: "Où loger aux JNJ ?", label: "Accueil" },
-  { id: 2, img: img2, title: "Option 1 - L'Évêché", label: "L'Évêché" },
-  { id: 3, img: img3, title: "Option 2 - Communautés & Centres", label: "Communautés" }
+  { id: 2, img: img2, title: "Communautés & Centres", label: "Communautés" },
+  { id: 3, img: img3, title: "Infos Pratiques & Rappels", label: "Infos Pratiques" }
 ];
 
 const Hebergement = () => {
@@ -30,7 +30,7 @@ const Hebergement = () => {
   const [direction, setDirection] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState('eveche');
+  const [activeTab, setActiveTab] = useState('centres');
   const timerRef = useRef(null);
 
   const slideNext = useCallback(() => {
@@ -113,22 +113,22 @@ const Hebergement = () => {
           {/* Column 1: Carousel */}
           <div className="carousel-column">
             <div className="carousel-outer-wrapper glass-card">
-              
+
               {/* Carousel Title Bar */}
               <div className="carousel-title-bar">
                 <span className="carousel-status">Affiche {currentIndex + 1} sur {slides.length}</span>
                 <h3 className="carousel-active-title">{slides[currentIndex].title}</h3>
-                
+
                 <div className="carousel-top-controls">
-                  <button 
-                    className="control-btn-circle" 
+                  <button
+                    className="control-btn-circle"
                     onClick={() => setIsPlaying(!isPlaying)}
                     title={isPlaying ? "Mettre en pause" : "Lancer le défilement"}
                   >
                     {isPlaying ? <Pause size={16} /> : <Play size={16} />}
                   </button>
-                  <button 
-                    className="control-btn-circle" 
+                  <button
+                    className="control-btn-circle"
                     onClick={() => setIsLightboxOpen(true)}
                     title="Agrandir l'image"
                   >
@@ -149,8 +149,8 @@ const Hebergement = () => {
                     exit="exit"
                     className="carousel-slide-wrapper"
                   >
-                    <img 
-                      src={slides[currentIndex].img} 
+                    <img
+                      src={slides[currentIndex].img}
                       alt={slides[currentIndex].title}
                       className="carousel-image"
                       draggable="false"
@@ -163,15 +163,15 @@ const Hebergement = () => {
                 </AnimatePresence>
 
                 {/* Left/Right Overlay Arrows */}
-                <button 
-                  className="carousel-arrow arrow-left" 
+                <button
+                  className="carousel-arrow arrow-left"
                   onClick={(e) => { e.stopPropagation(); slidePrev(); }}
                   aria-label="Image précédente"
                 >
                   <ChevronLeft size={24} />
                 </button>
-                <button 
-                  className="carousel-arrow arrow-right" 
+                <button
+                  className="carousel-arrow arrow-right"
                   onClick={(e) => { e.stopPropagation(); slideNext(); }}
                   aria-label="Image suivante"
                 >
@@ -195,9 +195,9 @@ const Hebergement = () => {
 
               {/* Quick Action bar underneath */}
               <div className="carousel-footer-actions">
-                <a 
-                  href={slides[currentIndex].img} 
-                  download={`JNJ_Hebergement_${currentIndex + 1}.jpg`} 
+                <a
+                  href={slides[currentIndex].img}
+                  download={`JNJ_Hebergement_${currentIndex + 1}.jpg`}
                   className="btn btn-outline btn-sm download-btn"
                   onClick={(e) => {
                     // Let normal download happen, but show active click feedback
@@ -215,21 +215,14 @@ const Hebergement = () => {
           <div className="info-column">
             <div className="info-tabs-container glass-card">
               <div className="info-tabs-header">
-                <button 
-                  className={`info-tab-btn ${activeTab === 'eveche' ? 'active' : ''}`}
-                  onClick={() => setActiveTab('eveche')}
-                >
-                  <Home size={16} />
-                  L'Évêché
-                </button>
-                <button 
+                <button
                   className={`info-tab-btn ${activeTab === 'centres' ? 'active' : ''}`}
                   onClick={() => setActiveTab('centres')}
                 >
                   <Info size={16} />
                   Centres &amp; Sœurs
                 </button>
-                <button 
+                <button
                   className={`info-tab-btn ${activeTab === 'tarifs' ? 'active' : ''}`}
                   onClick={() => setActiveTab('tarifs')}
                 >
@@ -240,40 +233,6 @@ const Hebergement = () => {
 
               <div className="info-tabs-content">
                 <AnimatePresence mode="wait">
-                  {activeTab === 'eveche' && (
-                    <motion.div
-                      key="eveche-tab"
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.2 }}
-                      className="tab-pane"
-                    >
-                      <div className="option-badge">Option 1</div>
-                      <h4>Hébergement à l'Évêché</h4>
-                      <p className="tab-subtitle">Les tarifs par nuitée pour un confort supérieur</p>
-                      
-                      <div className="pricing-list">
-                        <div className="pricing-item">
-                          <span className="price-title">Bungalow (Chambre climatisée)</span>
-                          <span className="price-value">5 000 F <small>/ nuitée</small></span>
-                        </div>
-                        <div className="pricing-item">
-                          <span className="price-title">Chambre avec lit 2 places</span>
-                          <span className="price-value">3 000 F - 3 500 F <small>/ nuitée</small></span>
-                        </div>
-                        <div className="pricing-item">
-                          <span className="price-title">Chambre avec lit 1 place</span>
-                          <span className="price-value">2 500 F <small>/ nuitée</small></span>
-                        </div>
-                        <div className="pricing-item">
-                          <span className="price-title">Dortoir (15 places)</span>
-                          <span className="price-value">1 000 F <small>/ pers. / nuitée</small></span>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-
                   {activeTab === 'centres' && (
                     <motion.div
                       key="centres-tab"
@@ -371,16 +330,16 @@ const Hebergement = () => {
               <div className="contact-buttons-grid">
                 <div className="contact-card">
                   <span className="contact-name">Contact 1</span>
-                  <span className="contact-number">+228 91 99 15 43</span>
+                  <span className="contact-number">+228 97 16 40 84</span>
                   <div className="contact-actions">
-                    <a href="tel:+22891991543" className="contact-action-btn phone-btn">
+                    <a href="tel:+22897164084" className="contact-action-btn phone-btn">
                       <Phone size={14} />
                       Appeler
                     </a>
-                    <a 
-                      href="https://wa.me/22891991543?text=Bonjour,%20je%20souhaite%20r%C3%A9server%20un%20logement%20pour%20les%20JNJ%20Atakpam%C3%A9%202026." 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href="https://wa.me/22897164084?text=Bonjour,%20je%20souhaite%20r%C3%A9server%20un%20logement%20pour%20les%20JNJ%20Atakpam%C3%A9%202026."
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="contact-action-btn wa-btn"
                     >
                       <MessageSquare size={14} />
@@ -391,16 +350,16 @@ const Hebergement = () => {
 
                 <div className="contact-card">
                   <span className="contact-name">Contact 2</span>
-                  <span className="contact-number">+228 97 26 78 92</span>
+                  <span className="contact-number">+228 92 00 41 74</span>
                   <div className="contact-actions">
-                    <a href="tel:+22897267892" className="contact-action-btn phone-btn">
+                    <a href="tel:+22892004174" className="contact-action-btn phone-btn">
                       <Phone size={14} />
                       Appeler
                     </a>
-                    <a 
-                      href="https://wa.me/22897267892?text=Bonjour,%20je%20souhaite%20r%C3%A9server%20un%20logement%20pour%20les%20JNJ%20Atakpam%C3%A9%202026." 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href="https://wa.me/22892004174?text=Bonjour,%20je%20souhaite%20r%C3%A9server%20un%20logement%20pour%20les%20JNJ%20Atakpam%C3%A9%202026."
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="contact-action-btn wa-btn"
                     >
                       <MessageSquare size={14} />
@@ -417,15 +376,15 @@ const Hebergement = () => {
       {/* Lightbox / Zoom Modal Overlay */}
       <AnimatePresence>
         {isLightboxOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="lightbox-overlay"
             onClick={() => setIsLightboxOpen(false)}
           >
-            <button 
-              className="lightbox-close-btn" 
+            <button
+              className="lightbox-close-btn"
               onClick={() => setIsLightboxOpen(false)}
               aria-label="Fermer le zoom"
             >
@@ -433,15 +392,15 @@ const Hebergement = () => {
             </button>
 
             <div className="lightbox-nav-overlay">
-              <button 
-                className="lightbox-nav-arrow arrow-left" 
+              <button
+                className="lightbox-nav-arrow arrow-left"
                 onClick={(e) => { e.stopPropagation(); slidePrev(); }}
                 aria-label="Image précédente"
               >
                 <ChevronLeft size={36} />
               </button>
 
-              <motion.div 
+              <motion.div
                 initial={{ scale: 0.9, y: 20 }}
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.9, y: 20 }}
@@ -449,9 +408,9 @@ const Hebergement = () => {
                 className="lightbox-content"
                 onClick={(e) => e.stopPropagation()}
               >
-                <img 
-                  src={slides[currentIndex].img} 
-                  alt={slides[currentIndex].title} 
+                <img
+                  src={slides[currentIndex].img}
+                  alt={slides[currentIndex].title}
                   className="lightbox-image"
                 />
                 <div className="lightbox-caption">
@@ -460,8 +419,8 @@ const Hebergement = () => {
                 </div>
               </motion.div>
 
-              <button 
-                className="lightbox-nav-arrow arrow-right" 
+              <button
+                className="lightbox-nav-arrow arrow-right"
                 onClick={(e) => { e.stopPropagation(); slideNext(); }}
                 aria-label="Image suivante"
               >
