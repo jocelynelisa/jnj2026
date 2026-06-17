@@ -37,8 +37,11 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a href="#benevolat" className="btn btn-outline nav-btn">
+          <a href="#benevolat" className="btn btn-outline nav-btn nav-btn-sm">
             Bénévolat
+          </a>
+          <a href="#entrepreneurs" className="btn btn-outline nav-btn nav-btn-sm">
+            Entrepreneurs
           </a>
           <a href="#inscription" className="btn btn-primary nav-btn">
             Inscription
@@ -69,10 +72,17 @@ const Navbar = () => {
           ))}
           <a 
             href="#benevolat" 
-            className="btn btn-outline mobile-nav-btn"
+            className="btn btn-outline mobile-nav-btn nav-btn-sm"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Bénévolat
+          </a>
+          <a 
+            href="#entrepreneurs" 
+            className="btn btn-outline mobile-nav-btn nav-btn-sm"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Entrepreneurs
           </a>
           <a 
             href="#inscription" 

@@ -52,6 +52,7 @@ const Footer = () => {
               <li><a href="#guide">Guide du pèlerin</a></li>
               <li><a href="#carte">Hébergement</a></li>
               <li><a href="#benevolat">Bénévolat</a></li>
+              <li><a href="#entrepreneurs">Entrepreneurs</a></li>
               <li><a href="#">Contactez-nous</a></li>
             </ul>
           </div>

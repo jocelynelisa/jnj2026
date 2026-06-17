@@ -12,29 +12,63 @@ import Gallery from './components/Gallery';
 import Map from './components/Map';
 import Footer from './components/Footer';
 import Benevolat from './components/Benevolat';
+import Entrepreneurs from './components/Entrepreneurs';
 import DonationFAB from './components/DonationFAB';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
+  const navigateTo = (page) => {
+    setCurrentPage(page);
+    // Force scroll to top on page change
+    window.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     const handleHashChange = () => {
-      if (window.location.hash === '#benevolat') {
-        setCurrentPage('benevolat');
-      } else {
+      const hash = window.location.hash;
+      if (hash === '#benevolat') {
+        navigateTo('benevolat');
+      } else if (hash === '#entrepreneurs') {
+        navigateTo('entrepreneurs');
+      } else if (hash === '') {
         setCurrentPage('home');
       }
     };
-    
-    // Initial check
+
+    // Initial check on mount
     handleHashChange();
-    
+
+    // Handle clicks on anchor links even when hash is already set
+    const handleLinkClick = (e) => {
+      const anchor = e.target.closest('a[href="#entrepreneurs"], a[href="#benevolat"]');
+      if (anchor) {
+        e.preventDefault();
+        const href = anchor.getAttribute('href');
+        // Force navigation even if hash hasn't changed
+        window.location.hash = href;
+        if (href === '#benevolat') navigateTo('benevolat');
+        else if (href === '#entrepreneurs') navigateTo('entrepreneurs');
+      }
+    };
+
     window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    document.addEventListener('click', handleLinkClick);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      document.removeEventListener('click', handleLinkClick);
+    };
   }, []);
 
   if (currentPage === 'benevolat') {
     return <Benevolat onBack={() => {
+      window.location.hash = '';
+      setCurrentPage('home');
+    }} />;
+  }
+
+  if (currentPage === 'entrepreneurs') {
+    return <Entrepreneurs onBack={() => {
       window.location.hash = '';
       setCurrentPage('home');
     }} />;
