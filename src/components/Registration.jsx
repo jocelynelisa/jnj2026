@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle, Clock } from 'lucide-react';
 import './Registration.css';
 
-const Registration = () => {
+const Registration = ({ isExpired }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [selectedDiocese, setSelectedDiocese] = useState("");
 
@@ -60,88 +60,101 @@ const Registration = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <form
-              className="registration-form"
-              name="inscription"
-              method="POST"
-              action="/"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}
-            >
-              <input type="hidden" name="form-name" value="inscription" />
-              <input type="hidden" name="type_formulaire" value="Pré-inscription JNJ 2026 (Pèlerin)" />
-              <p className="hidden" style={{ display: 'none' }}>
-                <label>
-                  Ne pas remplir ce champ si vous êtes humain : <input name="bot-field" />
-                </label>
-              </p>
-
-              <h3 className="form-title">Formulaire de pré-inscription</h3>
-
-              <div className="form-group">
-                <label htmlFor="name">Nom et Prénom(s)</label>
-                <input type="text" id="name" name="nom" placeholder="Ex: Koffi Emmanuel" className="form-input" required />
+            {isExpired ? (
+              <div className="expired-message-container">
+                <Clock className="expired-icon" size={48} />
+                <h3 className="form-title text-center">Inscriptions Closes</h3>
+                <p className="expired-form-text">
+                  Les pré-inscriptions en ligne pour les JNJ Atakpamé 2026 sont désormais fermées depuis le 10 Juillet 2026 à 23h59.
+                </p>
+                <p className="expired-form-subtext">
+                  Merci pour votre mobilisation exceptionnelle et à très bientôt pour l'événement !
+                </p>
               </div>
+            ) : (
+              <form
+                className="registration-form"
+                name="inscription"
+                method="POST"
+                action="/"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+              >
+                <input type="hidden" name="form-name" value="inscription" />
+                <input type="hidden" name="type_formulaire" value="Pré-inscription JNJ 2026 (Pèlerin)" />
+                <p className="hidden" style={{ display: 'none' }}>
+                  <label>
+                    Ne pas remplir ce champ si vous êtes humain : <input name="bot-field" />
+                  </label>
+                </p>
 
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="diocese">Diocèse d'origine</label>
-                  <select 
-                    id="diocese" 
-                    name="diocese" 
-                    className="form-input" 
-                    required
-                    value={selectedDiocese}
-                    onChange={(e) => setSelectedDiocese(e.target.value)}
-                  >
-                    <option value="">Sélectionnez votre diocèse</option>
-                    <option value="lome">Lomé</option>
-                    <option value="aneho">Aného</option>
-                    <option value="kpalime">Kpalimé</option>
-                    <option value="atakpame">Atakpamé</option>
-                    <option value="sokode">Sokodé</option>
-                    <option value="kara">Kara</option>
-                    <option value="dapaong">Dapaong</option>
-                    <option value="autre">Autre</option>
-                  </select>
-                  {selectedDiocese === 'autre' && (
-                    <div style={{ marginTop: '15px' }}>
-                      <input type="text" id="autre_diocese" name="autre_diocese" placeholder="Précisez votre diocèse" className="form-input" required />
-                    </div>
-                  )}
-                </div>
+                <h3 className="form-title">Formulaire de pré-inscription</h3>
 
                 <div className="form-group">
-                  <label htmlFor="parish">Paroisse</label>
-                  <input type="text" id="parish" name="paroisse" placeholder="Nom de votre paroisse" className="form-input" required />
-                </div>
-              </div>
-
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="phone">Téléphone (WhatsApp de préférence)</label>
-                  <input type="tel" id="phone" name="telephone" placeholder="+228 XX XX XX XX" className="form-input" required />
+                  <label htmlFor="name">Nom et Prénom(s)</label>
+                  <input type="text" id="name" name="nom" placeholder="Ex: Koffi Emmanuel" className="form-input" required />
                 </div>
 
-                <div className="form-group">
-                  <label htmlFor="age">Âge</label>
-                  <input type="number" id="age" name="age" min="13" max="100" placeholder="18" className="form-input" required />
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="diocese">Diocèse d'origine</label>
+                    <select 
+                      id="diocese" 
+                      name="diocese" 
+                      className="form-input" 
+                      required
+                      value={selectedDiocese}
+                      onChange={(e) => setSelectedDiocese(e.target.value)}
+                    >
+                      <option value="">Sélectionnez votre diocèse</option>
+                      <option value="lome">Lomé</option>
+                      <option value="aneho">Aného</option>
+                      <option value="kpalime">Kpalimé</option>
+                      <option value="atakpame">Atakpamé</option>
+                      <option value="sokode">Sokodé</option>
+                      <option value="kara">Kara</option>
+                      <option value="dapaong">Dapaong</option>
+                      <option value="autre">Autre</option>
+                    </select>
+                    {selectedDiocese === 'autre' && (
+                      <div style={{ marginTop: '15px' }}>
+                        <input type="text" id="autre_diocese" name="autre_diocese" placeholder="Précisez votre diocèse" className="form-input" required />
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="parish">Paroisse</label>
+                    <input type="text" id="parish" name="paroisse" placeholder="Nom de votre paroisse" className="form-input" required />
+                  </div>
                 </div>
-              </div>
 
-              <div className="form-group checkbox-group">
-                <input type="checkbox" id="consent" name="consentement" required />
-                <label htmlFor="consent" className="checkbox-label">
-                  J'accepte que mes données soient utilisées pour l'organisation des JNJ 2026.
-                </label>
-              </div>
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="phone">Téléphone (WhatsApp de préférence)</label>
+                    <input type="tel" id="phone" name="telephone" placeholder="+228 XX XX XX XX" className="form-input" required />
+                  </div>
 
-              <button type="submit" className="btn btn-primary submit-btn">
-                M'inscrire
-                <Send size={18} />
-              </button>
-            </form>
+                  <div className="form-group">
+                    <label htmlFor="age">Âge</label>
+                    <input type="number" id="age" name="age" min="13" max="100" placeholder="18" className="form-input" required />
+                  </div>
+                </div>
+
+                <div className="form-group checkbox-group">
+                  <input type="checkbox" id="consent" name="consentement" required />
+                  <label htmlFor="consent" className="checkbox-label">
+                    J'accepte que mes données soient utilisées pour l'organisation des JNJ 2026.
+                  </label>
+                </div>
+
+                <button type="submit" className="btn btn-primary submit-btn">
+                  M'inscrire
+                  <Send size={18} />
+                </button>
+              </form>
+            )}
           </motion.div>
         </div>
 

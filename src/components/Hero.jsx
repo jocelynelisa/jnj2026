@@ -2,9 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, ArrowRight } from 'lucide-react';
 import heroBg from '../assets/im1.webp';
+import Countdown from './Countdown';
 import './Hero.css';
 
-const Hero = () => {
+const Hero = ({ isExpired }) => {
   return (
     <section className="hero-section">
       <div 
@@ -51,6 +52,8 @@ const Hero = () => {
             Un rassemblement de foi, d'espérance et de fraternité pour toute la jeunesse catholique du Togo.
           </motion.p>
 
+          <Countdown targetDate="2026-07-10T23:59:00Z" />
+
           <motion.div
             className="hero-meta"
             initial={{ opacity: 0, y: 20 }}
@@ -79,10 +82,12 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <a href="#inscription" className="btn btn-primary btn-lg">
-              S'inscrire maintenant
-              <ArrowRight size={20} />
-            </a>
+            {!isExpired && (
+              <a href="#inscription" className="btn btn-primary btn-lg">
+                S'inscrire maintenant
+                <ArrowRight size={20} />
+              </a>
+            )}
             <a href="#pourquoi" className="btn btn-outline btn-lg glass">
               En savoir plus
             </a>

@@ -5,7 +5,7 @@ import whatsappIconUrl from '../assets/whatsapp.svg';
 import './Footer.css';
 
 
-const Footer = () => {
+const Footer = ({ isExpired }) => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -42,7 +42,7 @@ const Footer = () => {
               <li><a href="#hero">Accueil</a></li>
               <li><a href="#pourquoi">À propos</a></li>
               <li><a href="#programme">Programme</a></li>
-              <li><a href="#inscription">Inscription</a></li>
+              {!isExpired && <li><a href="#inscription">Inscription</a></li>}
             </ul>
           </div>
 
@@ -51,7 +51,7 @@ const Footer = () => {
             <ul className="footer-links">
               <li><a href="#guide">Guide du pèlerin</a></li>
               <li><a href="#carte">Hébergement</a></li>
-              <li><a href="#benevolat">Bénévolat</a></li>
+              {!isExpired && <li><a href="#benevolat">Bénévolat</a></li>}
               <li><a href="#entrepreneurs">Entrepreneurs</a></li>
               <li><a href="#">Contactez-nous</a></li>
             </ul>

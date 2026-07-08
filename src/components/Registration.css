@@ -222,3 +222,38 @@
 .toast-close:hover {
   color: var(--color-primary-dark);
 }
+
+.expired-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  min-height: 350px;
+}
+
+.expired-icon {
+  color: var(--color-danger);
+  margin-bottom: var(--space-6);
+  animation: pulse-red-soft 2s infinite;
+}
+
+.expired-form-text {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-4);
+  line-height: 1.4;
+}
+
+.expired-form-subtext {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@keyframes pulse-red-soft {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.8; }
+}

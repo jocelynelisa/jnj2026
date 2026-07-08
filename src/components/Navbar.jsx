@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 import logoJnj from '../assets/logo_jnj.png';
-const Navbar = () => {
+const Navbar = ({ isExpired }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -37,15 +37,19 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a href="#benevolat" className="btn btn-outline nav-btn nav-btn-sm">
-            Bénévolat
-          </a>
+          {!isExpired && (
+            <a href="#benevolat" className="btn btn-outline nav-btn nav-btn-sm">
+              Bénévolat
+            </a>
+          )}
           <a href="#entrepreneurs" className="btn btn-outline nav-btn nav-btn-sm">
             Entrepreneurs
           </a>
-          <a href="#inscription" className="btn btn-primary nav-btn">
-            Inscription
-          </a>
+          {!isExpired && (
+            <a href="#inscription" className="btn btn-primary nav-btn">
+              Inscription
+            </a>
+          )}
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -70,13 +74,15 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a 
-            href="#benevolat" 
-            className="btn btn-outline mobile-nav-btn nav-btn-sm"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Bénévolat
-          </a>
+          {!isExpired && (
+            <a 
+              href="#benevolat" 
+              className="btn btn-outline mobile-nav-btn nav-btn-sm"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Bénévolat
+            </a>
+          )}
           <a 
             href="#entrepreneurs" 
             className="btn btn-outline mobile-nav-btn nav-btn-sm"
@@ -84,13 +90,15 @@ const Navbar = () => {
           >
             Entrepreneurs
           </a>
-          <a 
-            href="#inscription" 
-            className="btn btn-primary mobile-nav-btn"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Inscription
-          </a>
+          {!isExpired && (
+            <a 
+              href="#inscription" 
+              className="btn btn-primary mobile-nav-btn"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Inscription
+            </a>
+          )}
         </div>
       )}
     </header>

@@ -14,9 +14,11 @@ import Footer from './components/Footer';
 import Benevolat from './components/Benevolat';
 import Entrepreneurs from './components/Entrepreneurs';
 import DonationFAB from './components/DonationFAB';
+import { useCountdown } from './hooks/useCountdown';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const { isExpired } = useCountdown('2026-07-10T23:59:00Z');
 
   const navigateTo = (page) => {
     setCurrentPage(page);
@@ -28,7 +30,12 @@ function App() {
     const handleHashChange = () => {
       const hash = window.location.hash;
       if (hash === '#benevolat') {
-        navigateTo('benevolat');
+        if (isExpired) {
+          window.location.hash = '';
+          setCurrentPage('home');
+        } else {
+          navigateTo('benevolat');
+        }
       } else if (hash === '#entrepreneurs') {
         navigateTo('entrepreneurs');
       } else if (hash === '') {
@@ -36,15 +43,19 @@ function App() {
       }
     };
 
-    // Initial check on mount
+    // Initial check on mount and whenever isExpired changes
     handleHashChange();
 
     // Handle clicks on anchor links even when hash is already set
     const handleLinkClick = (e) => {
       const anchor = e.target.closest('a[href="#entrepreneurs"], a[href="#benevolat"]');
       if (anchor) {
-        e.preventDefault();
         const href = anchor.getAttribute('href');
+        if (href === '#benevolat' && isExpired) {
+          e.preventDefault();
+          return;
+        }
+        e.preventDefault();
         // Force navigation even if hash hasn't changed
         window.location.hash = href;
         if (href === '#benevolat') navigateTo('benevolat');
@@ -58,9 +69,14 @@ function App() {
       window.removeEventListener('hashchange', handleHashChange);
       document.removeEventListener('click', handleLinkClick);
     };
-  }, []);
+  }, [isExpired]);
 
   if (currentPage === 'benevolat') {
+    if (isExpired) {
+      window.location.hash = '';
+      setCurrentPage('home');
+      return null;
+    }
     return <Benevolat onBack={() => {
       window.location.hash = '';
       setCurrentPage('home');
@@ -76,22 +92,22 @@ function App() {
 
   return (
     <div className="app-wrapper">
-      <Navbar />
+      <Navbar isExpired={isExpired} />
       
       <main>
-        <Hero />
+        <Hero isExpired={isExpired} />
         <Pourquoi />
         <Message />
         <Hebergement />
         <Program />
-        <Registration />
+        <Registration isExpired={isExpired} />
         <Partners />
         <Guide />
         <Gallery />
         <Map />
       </main>
 
-      <Footer />
+      <Footer isExpired={isExpired} />
       <DonationFAB />
     </div>
   );
